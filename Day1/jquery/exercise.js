@@ -27,8 +27,7 @@ function enterSubmit() {
 
 function hideShow() {
 	$('.list').hide();
-	$('.show').click(function (event) {
-		event.preventDefault();
+	$('.show').click(function () {
 		$('.list').toggle();
 		($('.show').text() === "Show") ? $(".show").text("Hide") : $(".show").text("Show");
 	});
@@ -37,22 +36,24 @@ function hideShow() {
 function showPhrases() {
 	$('.list').html('');
 	phrases.forEach(function(phrase) {
-		$('.list').append('<li>' + phrase + '<a href="#"><img src= "http://seamap.env.duke.edu/seamap3.0/icons/icon_delete.png"></a></li>');
+		$('.list').append('<li>' + phrase + '<a data-id ="my_id" href="#"><img src= "http://seamap.env.duke.edu/seamap3.0/icons/icon_delete.png"></a></li>');
 	})
 }
 
 function removePhrase() {
-	$('.list').find('li a').click(function (event) {
-		event.preventDefault();
+	$('.container').on('click', '.list li a', function(event) {
+		console.log(event);
+		// debugger;
 		var li = $(this).parent().text(); 
 		var index = phrases.indexOf(li);
 		if (index > -1) {
     		phrases.splice(index, 1);
     	}
-
     	showPhrases();
-	});
+    });
 }
+
+    	
 
 randomize(phrases, '.phrase');
 refresh();
