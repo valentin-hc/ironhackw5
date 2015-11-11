@@ -1,3 +1,5 @@
+"use strict"
+
 
 $('#search-artist').submit(function (event) {
   event.preventDefault();
