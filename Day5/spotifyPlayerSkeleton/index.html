@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="widget">
+			<form role="form" id="search">
+				<div class="form-group">
+					<label for="searchterm">Search song</label>
+					<input type="text" class="form-control" id="searchterm">
+				</form>
+				<div class="header">
+					<!-- Try adding/removing these classes: -->
+					<!-- disabled -->
+					<!-- playing -->
+					<div id="player" class="btn-play enabled"></div>
+					<div class="metadata">
+						<p class="title">Hunger of The Pine</p>
+						<p class="author">alt-J</p>
+						<div class="seekbar">
+						<progress value="0" max="30"></progress>
+					</div>
+				</div>
+			</div>
+			<div class="cover">
+				<img src="https://i.scdn.co/image/04da6dfc1f5f45fdeba938a0cc71cf372524fd43">
+			</div>
+		<audio id="track-player" src="https://p.scdn.co/mp3-preview/8e9c5ffdc38e91659bfe8b6bd44650dfc25a3d31"></audio>
+	</div>
+	<div class="modal fade js-modal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<!-- Close button -->
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span>&times;</span>
+					</button>
+					<h2>This is the modal's header.</h2>
+				</div>
+				<div class="modal-body">
+					<p>This is the modal's body.</p>
+				</div>
+				</div><!-- /.modal-content -->
+				</div><!-- /.modal-dialog -->
+				</div><!-- /.modal -->
+				<script type="text/javascript" src="spotify.js"></script>
+			</body>
+		</html>
